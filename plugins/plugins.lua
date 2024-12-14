@@ -2,9 +2,7 @@ return {
   {
     "github/copilot.vim",
     lazy = false,
-    keys = {
-      vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-    }
+    keys = { }
   },
 
   {

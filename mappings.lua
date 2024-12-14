@@ -10,6 +10,9 @@ map("i", "jk", "<ESC>")
 -- map Lazy to <leader>l
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
+-- map ctrl + l to copilot suggestion accept
+map('i', '<C-l>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false})
+
 -- map save to leader + f + s
 map("n", "<leader>fs", "<cmd> w <cr>", { desc = "Save" })
 
