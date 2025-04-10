@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-	theme = "monekai",
+	theme = "flexoki-light",
   transparency = true,
 
 	-- hl_override = {
@@ -14,6 +14,7 @@ M.base46 = {
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
+-- start dashboard on startup
 M.nvdash = {
   load_on_startup = true,
 }

@@ -1,11 +1,9 @@
--- load defaults i.e lua_lsp
-require("nvchad.configs.lspconfig").defaults()
-
+local nvlsp = require "nvchad.configs.lspconfig"
 local lspconfig = require "lspconfig"
 
--- EXAMPLE
-local servers = {  }
-local nvlsp = require "nvchad.configs.lspconfig"
+nvlsp.defaults() -- loads nvchad's defaults
+
+local servers = { "html", "cssls", "clangd" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -22,3 +20,14 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+--
+-- Anywhere in your configuration
+lspconfig.omnisharp.setup {
+                cmd = { "dotnet", vim.fn.stdpath "data" .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+                enable_import_completion = true,
+                organize_imports_on_format = true,
+                enable_roslyn_analyzers = true,
+                root_dir = function ()
+                    return vim.loop.cwd() -- current working directory
+                end,
+            }

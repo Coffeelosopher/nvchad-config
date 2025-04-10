@@ -17,8 +17,36 @@ map('i', '<C-l>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = 
 map("n", "<leader>fs", "<cmd> w <cr>", { desc = "Save" })
 
 -- map leader f p to :cd to nvim config dir and focuses on nvimtree
-map("n", "<leader>fp", "<cmd>cd ~/Appdata/Local/nvim/<cr><cmd>NvimTreeFocus<cr>", { desc = "jump to Config Directory" })
+map("n", "<leader>fp", "<cmd>cd ~/.config/nvim/lua <cr>", { desc = "jump to Config Directory" })
 
 -- unbind f1 nvim help
 map("n", "<F1>", "<nop>", { desc = "unbind F1" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+--set shorter name for keymap function
+
+-- knap mappings
+-- F5 processes the document once, and refreshes the view
+map({ 'n', 'v', 'i' },'<F5>', function() require("knap").process_once() end)
+
+-- F6 closes the viewer application, and allows settings to be reset
+map({ 'n', 'v', 'i' },'<F6>', function() require("knap").close_viewer() end)
+
+-- F7 toggles the auto-processing on and off
+map({ 'n', 'v', 'i' },'<F7>', function() require("knap").toggle_autopreviewing() end)
+
+-- F8 invoes a SyncTeX forward search, or similar, where appropriate
+map({ 'n', 'v', 'i' },'<F8>', function() require("knap").forward_jump() end)
+
+
+-- ~/.config/nvim/lua/custom/mappings.lua
+local M = {}
+
+M.n = { -- Normal mode mappings
+  ["gd"] = { "<cmd>lua require('omnisharp_extended').lsp_definition()<CR>", "OmniSharp Definition" },
+  ["<leader>D"] = { "<cmd>lua require('omnisharp_extended').lsp_type_definition()<CR>", "OmniSharp Type Definition" },
+  ["gr"] = { "<cmd>lua require('omnisharp_extended').lsp_references()<CR>", "OmniSharp References" },
+  ["gi"] = { "<cmd>lua require('omnisharp_extended').lsp_implementation()<CR>", "OmniSharp Implementation" },
+}
+
+return M
