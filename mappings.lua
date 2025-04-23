@@ -17,7 +17,8 @@ map('i', '<C-l>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = 
 map("n", "<leader>fs", "<cmd> w <cr>", { desc = "Save" })
 
 -- map leader f p to :cd to nvim config dir and focuses on nvimtree
-map("n", "<leader>fp", "<cmd>cd ~/.config/nvim/lua <cr>", { desc = "jump to Config Directory" })
+map("n", "<leader>fp", "<cmd>cd ~/.config/nvim/lua <cr>", { desc = "jump to Neovim Config Directory" })
+map("n", "<leader>fP", "<cmd>cd ~/Configuration/nix-config <cr>", { desc = "jump to Nix Config Directory" })
 
 -- unbind f1 nvim help
 map("n", "<F1>", "<nop>", { desc = "unbind F1" })
