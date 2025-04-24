@@ -7,9 +7,10 @@
 local o = vim.o
 local g = vim.g
 
-o.guifont = "FiraCode Nerd Font:h11"
+--o.guifont = "FiraCode Nerd Font:h11"
+o.guifont = "CaskaydiaMono Nerd Font:h11"
 g.neovide_position_animation_length = 0
-g.neovide_cursor_animation_length = .01
+g.neovide_cursor_animation_length = .07
 g.neovide_cursor_trail_size = 0.5
 g.neovide_cursor_animate_in_insert_mode = false
 g.neovide_cursor_animate_command_line = false
@@ -21,7 +22,7 @@ o.cursorlineopt ='both' -- to enable cursorline!
 
 local M = {}
 M.base46 = {
-	theme = "oceanic-light",
+	theme = "flexoki-light",
   transparency = true,
 
 	-- hl_override = {
