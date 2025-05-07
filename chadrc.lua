@@ -22,7 +22,7 @@ o.cursorlineopt ='both' -- to enable cursorline!
 
 local M = {}
 M.base46 = {
-	theme = "flexoki-light",
+	theme = "flex-light",
   transparency = true,
 
 	-- hl_override = {
