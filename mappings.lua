@@ -20,6 +20,16 @@ map("n", "<leader>fs", "<cmd> w <cr>", { desc = "Save" })
 map("n", "<leader>fp", "<cmd>cd ~/.config/nvim/lua <cr>", { desc = "jump to Neovim Config Directory" })
 map("n", "<leader>fP", "<cmd>cd ~/Configuration/nix-config <cr>", { desc = "jump to Nix Config Directory" })
 
+-- Obsidian Mappings
+map("n", "<leader>nrf", "<nop>", { desc = "unbind default line number set" })
+map("n", "<leader>nrs", "<cmd>ObsidianSearch <cr>", { desc = "Obsidian Search" })
+map("n", "<leader>nra", "<cmd>ObsidianDailies<cr>", { desc = "Obsidian Dailies" })
+--
+map("n", "<leader>nrf", function()
+  vim.cmd("cd ~/Vaults/Obsidian/Live-Sync-Notes/")
+  vim.cmd("ObsidianQuickSwitch")
+end, { desc = "CD to vault & search in notes" })
+
 -- unbind f1 nvim help
 map("n", "<F1>", "<nop>", { desc = "unbind F1" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
