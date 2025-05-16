@@ -31,6 +31,9 @@ return {
       template = nil
     },
 
+    -- disable property section creation on file save
+    disable_frontmatter = true,
+
     -- completion of wiki links, local markdown links, and tags using nvim-cmp.
     completion = {
       -- Set to false to disable completion.
