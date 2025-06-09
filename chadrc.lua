@@ -8,7 +8,7 @@ local o = vim.o
 local g = vim.g
 
 -- o.guifont = "FiraCode Nerd Font:h11" -- default font working 
-o.guifont = "CaskaydiaMono Nerd Font:h11" -- custom font unstable setup
+o.guifont = "CaskaydiaMono NFM:h11" -- custom font unstable setup
 g.neovide_position_animation_length = 0
 g.neovide_cursor_animation_length = .07
 g.neovide_cursor_trail_size = 0.5
