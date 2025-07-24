@@ -42,6 +42,9 @@ return {
       min_chars = 2,
     },
 
+    -- disable property section in notes on file write
+    disable_frontmatter = true,
+
     ui = {
         enable = true,  -- set to false to disable all additional syntax features
         update_debounce = 200,  -- update delay after a text change (in milliseconds)
