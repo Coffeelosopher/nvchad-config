@@ -18,7 +18,7 @@ map("n", "<leader>fs", "<cmd> w <cr>", { desc = "Save" })
 
 -- map leader f p to :cd to nvim config dir and focuses on nvimtree
 map("n", "<leader>fp", "<cmd>cd ~/.config/nvim/lua <cr>", { desc = "jump to Neovim Config Directory" })
---map("n", "<leader>fP", "<cmd>cd ~/Configuration/nix-config <cr>", { desc = "jump to Nix Config Directory" })
+map("n", "<leader>fP", "<cmd>cd ~/Configuration/nix-config <cr>", { desc = "jump to Nix Config Directory" })
 
 -- Obsidian Mappings
 map("n", "<leader>nrf", "<nop>", { desc = "unbind default line number set" })
