@@ -18,7 +18,7 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
-    dir = "~/Vaults/Obsidian/Live-Sync-Notes/",
+    dir = "~/Vaults/Obsidian/main/",
 
     daily_notes = {
       -- Optional, if you keep daily notes in a separate directory.

@@ -34,7 +34,7 @@ end
 
 local M = {}
 M.base46 = {
-	theme = "flex-light",
+	theme = "flexoki",
   transparency = true,
 
 	-- hl_override = {
